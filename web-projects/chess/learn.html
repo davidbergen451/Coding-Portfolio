@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Chess — Rules, Pieces &amp; Special Moves</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a class="brand-name" href="index.html">Chess<span class="brand-mark">.</span></a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="media.html">Media</a>
+        <a href="play.html">Play</a>
+        <a href="source.html">Sources</a>
+        <a class="trap" href="dont-click.html">Don't click this</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:24px;">
+      <div class="wrap">
+        <p class="coordinates">Rules</p>
+        <h1 style="max-width:34ch;">Everything you need to know to play your first game</h1>
+        <p>Chess is a complex game with many pieces and rules. Here's a short video from Danny Rensch, a Chess International Master, walking through the basics — or read on below.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>Watch: how to play</h2></div>
+        <figure>
+          <iframe width="100%" height="374" style="max-width:664px;border:1px solid rgba(23,20,15,0.15);border-radius:3px;" src="https://www.youtube.com/embed/ej_fnsdsksA" title="How To Play Chess: Learn All The Rules Of The Royal Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <figcaption><em>How To Play Chess: Learn All The Rules Of The Royal Game</em> — Danny Rensch, YouTube, 14 Jul 2021.
+            <a href="https://www.youtube.com/watch?v=ej_fnsdsksA&t=6s">Watch on YouTube</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>Equipment</h2></div>
+        <p>To play chess, you need a set of chess pieces and a chessboard. A chess clock is required for timed games, and players often use a score sheet to record their moves.</p>
+        <p>A chess piece set has two armies of pieces, each with eight pawns, two knights, two bishops, two rooks, a queen, and a king. Players tell their armies apart by color: light and dark pieces. Whatever the actual color, the light side is called White and the dark side Black — after the ivory and ebony pieces used historically.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>The pieces</h2></div>
+        <p>There are six types of chess pieces: the pawn, knight, bishop, rook, queen, and king. Each moves differently and carries a different point value.</p>
+        <figure>
+          <img src="assets/piece-set.jpeg" alt="Icons of all six chess piece types: rook, knight, bishop, king, queen, pawn.">
+        </figure>
+        <p>Pawns are worth one point, knights and bishops three, rooks five, and the queen nine. The king is priceless — if you "lose" the king, you lose the game. Points don't decide the winner, but they give you a rough sense of who's ahead.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>Setup</h2></div>
+        <p>When you set up the board, the bottom-right square must be light. Rooks go in the corners, pawns form a straight line in front of them, and knights sit beside the rooks with a pawn in front. Bishops go beside the knights, the queen takes the square matching her own color, and the king takes the last square. Once set up, it should look like this:</p>
+        <figure>
+          <img src="assets/board-medium.png" alt="A chess board correctly set up at the start of a game.">
+          <figcaption>Chess Board And Pieces, free vector by easyvectors.com</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose piece-rule">
+        <div class="eyebrow-rule"><span class="square"></span><h2>How each piece moves</h2></div>
+        <ul>
+          <li><strong>Pawn</strong> — moves one square forward, or two on its first move, and never moves backward. It captures one square diagonally — the only piece that captures differently than it moves. It's also the only piece that can use the special <a href="#en-passant">en passant</a> rule, covered below.</li>
+          <li><strong>Knight</strong> — moves two squares in one direction and one square perpendicular to that, tracing an "L" shape. Knights capture by landing on a piece, and are the only piece that can jump over others.</li>
+          <li><strong>Bishop</strong> — moves any number of squares diagonally, so it can never leave the color of square it started on. Each player starts with one light-squared and one dark-squared bishop.</li>
+          <li><strong>Rook</strong> — moves any number of squares vertically or horizontally. Along with the king, it's the only piece involved in <a href="#castling">castling</a>, explained below.</li>
+          <li><strong>Queen</strong> — the most powerful piece on the board. It moves diagonally, horizontally, or vertically, any number of squares, as long as nothing blocks it.</li>
+          <li><strong>King</strong> — moves one square in any direction, and can take part in castling alongside a rook.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>Check and checkmate</h2></div>
+        <p>When a player's king is attacked by an enemy piece, the king is <em>in check</em>. The attacked player must protect the king — by blocking with a piece, moving the king to safety, or capturing the attacker. If none of those are possible, the king is <em>checkmated</em> and the game is over. Checkmating your opponent is the whole goal of chess.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>Special rules</h2></div>
+
+        <h3 id="castling" style="font-family:var(--serif);margin-top:0;">Castling</h3>
+        <p>Castling protects the king and develops a rook at the same time. The king moves two squares to one side, and the rook on that side jumps over it, landing right next to it. Castling is only legal if:</p>
+        <ul style="color:#322e26;">
+          <li>Neither the king nor that rook has moved yet</li>
+          <li>There are no pieces between them</li>
+          <li>The king is not currently in check</li>
+          <li>The king does not pass through or land on a square under attack</li>
+        </ul>
+
+        <h3 style="font-family:var(--serif);">Pawn promotion</h3>
+        <p>When a pawn reaches the far end of the board, it promotes into any higher-value piece — almost always a queen. This applies to both White's and Black's pawns when they reach the last rank facing them.</p>
+
+        <h3 id="en-passant" style="font-family:var(--serif);">En passant capture</h3>
+        <p>The trickiest rule in chess. A pawn can capture an enemy pawn "in passing" if:</p>
+        <ul style="color:#322e26;">
+          <li>The capturing pawn is on its fifth rank (three ranks from where it started)</li>
+          <li>An enemy pawn on an adjacent file moves forward two squares, landing right beside it</li>
+          <li>The capture happens immediately on the very next move — otherwise the option is lost</li>
+        </ul>
+        <p>If all three are true, the attacker may move one square diagonally onto the square just behind the enemy pawn, capturing it in the process.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap prose">
+        <div class="eyebrow-rule"><span class="square"></span><h2>How games end</h2></div>
+        <p>A game of chess ends in a win, a loss, or a draw. You win by checkmating your opponent, or if they run out of time on the clock. You lose the same way, in reverse.</p>
+        <p>Draws happen more often, and in more ways: by mutual agreement, threefold repetition (the same position occurring three times), a dead position (neither side can possibly checkmate), the fifty-move rule (fifty moves pass with no capture and no pawn move), or stalemate (the player to move has no legal move, but isn't in check).</p>
+      </div>
+    </section>
+
+    <section style="text-align:center;">
+      <div class="wrap">
+        <h2 style="font-family:var(--serif);">Now you know how to play — ready to try it?</h2>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="play.html">Play a game</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Built for anyone who wants to learn the royal game.</span>
+      <a href="source.html">My sources →</a>
+    </div>
+  </footer>
+
+</body>
+</html>

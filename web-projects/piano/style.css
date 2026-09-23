@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #15120f;
+  --ink-soft: #221d18;
+  --ivory: #f7f2e4;
+  --ivory-dim: #cfc6b3;
+  --gold: #cda434;
+  --gold-bright: #e3bf55;
+  --teal: #1f6f6f;
+  --teal-bright: #2a9090;
+  --danger: #a3392f;
+  --radius: 4px;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--ivory);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Top bar (piano-key motif) ---------- */
+
+.top-bar {
+  background:
+    repeating-linear-gradient(90deg, var(--ink) 0 46px, var(--ink-soft) 46px 92px);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.menu-btn {
+  background: none;
+  border: 1px solid rgba(247,242,228,0.3);
+  color: var(--ivory);
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.menu-btn:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+.brand-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ivory);
+}
+.brand-name span { color: var(--gold-bright); }
+
+/* ---------- Layout: sidenav + main ---------- */
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+
+.sidenav {
+  width: 220px;
+  flex: none;
+  background: var(--ink);
+  color: var(--ivory-dim);
+  padding: 22px 0;
+  transition: margin-left .2s ease;
+}
+
+.sidenav a {
+  display: block;
+  padding: 11px 22px;
+  font-size: 14.5px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+}
+.sidenav a:hover, .sidenav a.active {
+  background: rgba(205,164,52,0.12);
+  color: var(--gold-bright);
+  border-left-color: var(--gold);
+}
+.sidenav #closeNavLink {
+  display: none;
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .sidenav #closeNavLink { display: block; }
+}
+.sidenav .divider {
+  height: 1px;
+  background: rgba(247,242,228,0.1);
+  margin: 12px 20px;
+}
+.sidenav a.trap { color: var(--danger); }
+.sidenav a.trap:hover { background: rgba(163,57,47,0.15); border-left-color: var(--danger); color: #e3766a; }
+
+main.content { flex: 1; min-width: 0; padding: 40px 32px 64px; }
+
+@media (max-width: 760px) {
+  .sidenav { position: fixed; top: 64px; bottom: 0; left: 0; margin-left: -220px; z-index: 15; overflow-y: auto; }
+  .sidenav.open { margin-left: 0; box-shadow: 8px 0 24px rgba(0,0,0,0.3); }
+  main.content { padding: 28px 18px 48px; }
+}
+
+/* ---------- Home ---------- */
+
+.page-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(28px, 4.5vw, 40px);
+  margin: 0 0 12px;
+}
+.page-lede {
+  color: #4c4739;
+  max-width: 60ch;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.keyboard-figure {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(21,18,15,0.12);
+  max-width: 420px;
+}
+
+.chord-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+.chord-tile {
+  background: #fff;
+  border: 1px solid rgba(21,18,15,0.12);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 18px 8px;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  transition: border-color .15s ease, transform .15s ease;
+}
+.chord-tile:hover { border-color: var(--gold); transform: translateY(-2px); }
+.chord-tile .sub { display:block; font-family: var(--sans); font-weight:500; font-size:11px; color:#7a7362; margin-top:4px; }
+
+/* ---------- Chord page ---------- */
+
+.chord-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+.chord-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 46px);
+}
+.chord-notes {
+  font-size: 14px;
+  color: var(--teal);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.chord-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.chord-figure {
+  border: 1px solid rgba(21,18,15,0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.fact-list li {
+  background: #fff;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 14px 16px;
+  font-size: 14.5px;
+  color: #322e26;
+}
+.fact-list .fact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.chord-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .chord-body { grid-template-columns: 1fr; }
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.btn-primary { background: var(--teal); color: var(--ivory); }
+.btn-primary:hover { background: var(--teal-bright); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--ink); border-color: rgba(21,18,15,0.3); }
+.btn-outline:hover { border-color: var(--ink); }
+.btn-gold { background: var(--gold); color: var(--ink); }
+.btn-gold:hover { background: var(--gold-bright); }
+.btn-danger { background: var(--danger); color: var(--ivory); }
+
+/* ---------- Easter egg ---------- */
+
+.center-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+  padding: 60px 24px;
+}
+.center-page h1 { font-family: var(--serif); font-size: clamp(26px, 5vw, 38px); margin: 0; }
+.center-page p { color: #4c4739; max-width: 46ch; }

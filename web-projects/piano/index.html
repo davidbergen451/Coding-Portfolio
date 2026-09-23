@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piano Chords — Learn Chord by Chord</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <button class="menu-btn" onclick="openNav()">&#9776;</button>
+      <a class="brand-name" href="index.html">Piano<span>Chords</span></a>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="sidenav" id="sidenav">
+      <a href="javascript:void(0)" onclick="closeNav()" id="closeNavLink">&times; Close</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="chords/c.html">C chord</a>
+      <a href="chords/d.html">D chord</a>
+      <a href="chords/e.html">E chord</a>
+      <a href="chords/f.html">F chord</a>
+      <a href="chords/g.html">G chord</a>
+      <a href="chords/a.html">A chord</a>
+      <a href="chords/b.html">B chord</a>
+      <div class="divider"></div>
+      <a href="dont-click.html" class="trap">Don't click this</a>
+    </nav>
+
+    <main class="content">
+      <h1 class="page-title">Learn piano chords</h1>
+      <p class="page-lede">Welcome! On this site you can learn piano chords and the theory behind them. Pick a chord from the menu to see it illustrated on the keyboard, with the notes, theory, and fingering explained.</p>
+
+      <img class="keyboard-figure" src="assets/keys-demo.gif" alt="An animated piano keyboard highlighting notes as chords are played.">
+
+      <div class="chord-grid">
+        <a class="chord-tile" href="chords/c.html">C<span class="sub">C · E · G</span></a>
+        <a class="chord-tile" href="chords/d.html">D<span class="sub">D · F♯ · A</span></a>
+        <a class="chord-tile" href="chords/e.html">E<span class="sub">E · G♯ · B</span></a>
+        <a class="chord-tile" href="chords/f.html">F<span class="sub">F · A · C</span></a>
+        <a class="chord-tile" href="chords/g.html">G<span class="sub">G · B · D</span></a>
+        <a class="chord-tile" href="chords/a.html">A<span class="sub">A · C♯ · E</span></a>
+        <a class="chord-tile" href="chords/b.html">B<span class="sub">B · D♯ · F♯</span></a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

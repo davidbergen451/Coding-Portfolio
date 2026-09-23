@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Projects</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500&display=swap');
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #17140f;
+      color: #f3ead9;
+      font-family: 'Inter', sans-serif;
+      padding: 24px;
+    }
+    .wrap { max-width: 720px; width: 100%; text-align: center; }
+    h1 { font-family: 'Fraunces', serif; font-size: clamp(28px, 5vw, 40px); margin: 0 0 8px; }
+    p.lede { color: #cfc6b3; margin: 0 0 36px; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #221d18;
+      border: 1px solid rgba(243,234,217,0.12);
+      border-radius: 6px;
+      padding: 28px 22px;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    a.card:hover { border-color: #cda434; transform: translateY(-3px); }
+    a.card h2 { font-family: 'Fraunces', serif; font-size: 22px; margin: 0 0 8px; }
+    a.card p { font-size: 13.5px; color: #b8b0a0; margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Two small projects</h1>
+    <p class="lede">Pick one to explore.</p>
+    <div class="cards">
+      <a class="card" href="chess/index.html">
+        <h2>Chess</h2>
+        <p>Learn the rules, watch great games, and play online.</p>
+      </a>
+      <a class="card" href="piano/index.html">
+        <h2>Piano Chords</h2>
+        <p>Learn every major chord, key by key.</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
